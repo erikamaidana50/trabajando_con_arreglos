@@ -20,7 +20,7 @@ const strangeArray = [
   },
   "Another String",
   ["Hola mundo!"],
-  "B is a letter",
+  "b is a letter",
   "JavaScript",
 ];
 
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   // Para filtrar los elementos del array para que solo sean strings
   const filteredAndSortedArray = strangeArray
     .filter((element) => typeof element === "string") // Solo strings
-    .sort(); // Ordenar alfabéticamente
+   .sort((a, b) => a.localeCompare(b));  // Ordenar alfabéticamente
 
   // Esto es para mostrar los elementos filtrados y ordenados
   showList(filteredAndSortedArray);
